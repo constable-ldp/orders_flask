@@ -1,9 +1,23 @@
-body > h1 {
-    font-size: 72pt;
-    color: red;
+
+table {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+td:hover {
+    background-color: red;
 }
 
-body > div > p {
-    font-size: 20pt;
-    color: blue;
+th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.dropdown {
+    margin: 30px;
 }

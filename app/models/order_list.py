@@ -1,7 +1,7 @@
 from app.models.order import *
 
-order1 = Order("Malcolm", "1st Apr", 1, ["'Stretching for dummies'"], 666)
-order2 = Order("Ariel", "6th Oct", 2, ["'How to breathe'", "'How to dance without legs'"], 732)
-order3 = Order("Daniel", "12th Mar", 3, ["'How to lucid dream'", "'Psychic Protection'","'How not to kill your plant'"], 904)
+order1 = Order(1, 'John', '03/03/2021', ['His Dark Materials', 'Harry Potter'], 2, 9.98)
+order2 = Order(2, 'Mary', '05/03/2021', ['The Great Gatsby'], 1, 4.99)
+order3 = Order(3, 'Luke', '06/03/2021', ['The Old Man and the Sea', 'On The Road', 'Harry Potter'], 3, 14.97)
 
 orders = [order1, order2, order3]

@@ -9,16 +9,35 @@
 </head>
 <body>
     <h1>Orders:</h1>
-    {% for order in orders %}
-        <div>
-            <p>
-                {{ order.order_date }}: {{ order.customer_name }} ordered {{order.quantity}} book(s). 
-                Titles are:
-                {% for title in order.book_title %}
-                {{ title }},
-                {% endfor %}
-            </p>
-        </div>
-    {% endfor %}
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Customer</th>
+            <th>Quantity</th>
+            <th>Cost</th>
+            <th>Books</th>
+        </tr>
+        {% for order in orders %}
+        <tr>
+            <div class='id'>
+                <td>
+                    <a href="/orders/{{order.order_id}}">{{order.order_id}}</a>
+                </td>
+            </div>
+            <td>{{order.order_date }}</td>
+            <td>{{order.customer_name}}</td> 
+            <td>{{order.quantity}}</td>
+            <td>{{order.cost}}</td>
+            <td class="dropdown">
+                <select name="title">
+                    {% for title in order.book_list %}
+                    <option value="book title">{{ title }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
